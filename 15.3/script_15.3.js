@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // отправка и получение сообщений
   btnSend.addEventListener("click", () => {
     const inputField = document.querySelector(".input");
-    const userMessage = document.querySelector(".input").value;
+    const userMessage = document.querySelector(".input").value.trim(" ");
     if (userMessage) {
       writeToScreenUser(userMessage);
       const serverResponce = writeToScreenServer(userMessage);
