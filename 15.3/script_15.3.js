@@ -11,7 +11,7 @@ const writeToScreenUser = (message) => {
   let messageDiv = document.createElement("div");
   messageDiv.classList.add("message_div", "user");
   messageDiv.innerHTML = message;
-  externalWindowChat.appendChild(messageDiv);
+  externalWindowChat.append(messageDiv);
 };
 
 // отображение сообщения сервера
@@ -20,7 +20,7 @@ const writeToScreenServer = (message) => {
   messageDiv.classList.add("message_div", "server");
   messageDiv.innerHTML = message;
   messageDiv.style.color = "blue";
-  externalWindowChat.appendChild(messageDiv);
+  externalWindowChat.append(messageDiv);
 };
 
 // отображение геолокации
@@ -33,8 +33,8 @@ const writeToScreenGeo = (url) => {
     linkGeo.innerHTML = "Гео-локация";
     linkGeo.href = url;
     linkGeo.target = "_blank";
-    messageDiv.appendChild(linkGeo);
-    externalWindowChat.appendChild(messageDiv);
+    messageDiv.append(linkGeo);
+    externalWindowChat.append(messageDiv);
   }
 };
 
